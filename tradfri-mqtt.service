@@ -1,0 +1,13 @@
+[Unit]
+Description=pytradfri library to MQTT
+After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/home/ruben/tradfri-mqtt
+ExecStart=/usr/bin/python3.5 client.py
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
